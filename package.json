@@ -1,0 +1,50 @@
+{
+  "name": "betterarch",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "build": "yarn run clean && tsc",
+    "start:dev": "ts-node src/index.ts",
+    "start": "node dist/src/index.js",
+    "start:script": "ts-node src/scripts/playground.ts",
+    "dev": "nodemon src/index.ts",
+    "demo": "NODE_ENV=demo nodemon",
+    "seed": "NODE_ENV=development ts-node src/seed/init.ts",
+    "test": "jest --runInBand --detectOpenHandles",
+    "lint": "tslint --project tsconfig.json",
+    "typeorm": "./node_modules/typeorm/cli.js"
+  },
+  "dependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/helmet": "^4.0.0",
+    "@types/jsonwebtoken": "^8.5.4",
+    "@types/node": "^16.4.7",
+    "bcryptjs": "^2.4.3",
+    "class-validator": "^0.13.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.13.4",
+    "nodemon": "^2.0.12",
+    "npm-run-all": "^4.1.5",
+    "pg": "^8.7.1",
+    "pg-query-stream": "^4.2.1",
+    "rimraf": "^3.0.2",
+    "slugify": "^1.6.0",
+    "ts-node": "^10.1.0",
+    "typeorm": "^0.2.36",
+    "typescript": "^4.3.5",
+    "yarn-run-all": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.171",
+    "tslint": "^6.1.3"
+  }
+}
