@@ -5,3 +5,7 @@ export interface ICreatePostData {
     body:string
     user:User
 }
+
+export interface None {
+    
+}
